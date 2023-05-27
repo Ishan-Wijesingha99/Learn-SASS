@@ -1,0 +1,23 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+  // lightness() is just a built-in function
+  // if the lightness of the colour you've passed in is greater than 40%, then return black colour
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    // if colour's ligtness is less than 40%, return white
+    @return #fff;
+  }
+}
