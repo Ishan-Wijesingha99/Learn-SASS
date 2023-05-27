@@ -1,0 +1,62 @@
+// once you click "watch scss" down the bottom, it acts like nodemon, whenever you save the main.scss file, css will be compiled in the /dist/css file
+// you can change where you want to place css files by changing vs code setting
+
+// you can write plain css in scss if you want
+body {
+  background-color: red;
+}
+
+// never modify the css file directly, only change the scss file
+
+
+
+// sass variables
+// better than css variables because css variables only work for 90% of browsers, sass variables work for 100% of them
+$primary-colour: #272727;
+
+body {
+  background-color: $primary-colour;
+}
+
+
+
+// maps
+// they are like arrays, they are just lists of css key-value pairs
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+// this is how you access the value in a map
+body {
+  font-weight: map-get($font-weight, bold);
+  color: white;
+}
+
+// nesting
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  // instead of accessing the p tag in .main by doing .main p {} , we use nesting
+  p {
+    font-weight: map-get($font-weight, bold);
+  }
+
+  // if the nested element has a classname that starts the same as the parent element, we can write it like this
+  // instead of main-paragraph, just write &-paragraph
+  &-paragraph {
+    text-decoration: underline;
+  }
+
+  &-paragraph:hover {
+    color: red;
+  }
+
+  // if you want a styling to be applied to a certain element plus it's parent element, you can do this...
+  // this iwll apply to .main and .main-paragraph
+  #{&}-paragraph {
+    font-size: 24px;
+  }
+}
