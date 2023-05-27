@@ -50,4 +50,14 @@ body {
   color: rgb(172, 104, 104);
   padding: 2rem;
   background-color: rgb(78, 157, 131);
+}
+
+.extend-p-1, .extend-p-2 {
+  padding: 1rem;
+  background-color: blueviolet;
+  font-size: 2rem;
+}
+
+.extend-p-2 {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

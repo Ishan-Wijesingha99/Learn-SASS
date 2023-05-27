@@ -129,4 +129,17 @@ body {
 
 
 
-//
+// extend
+// if you have two elements and you want the second element to have all the styling rules of the first plus a couple more, you can use extending
+.extend-p-1 {
+  padding: 1rem;
+  background-color: blueviolet;
+  font-size: 2rem;
+}
+
+.extend-p-2 {
+  // this will make .extend-p-2 take all the styles applied to extend-p-1
+  @extend .extend-p-1;
+
+  text-decoration: underline;
+}
