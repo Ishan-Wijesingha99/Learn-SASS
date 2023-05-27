@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: red;
 }
@@ -26,4 +32,9 @@ body {
 }
 .main .main-paragraph {
   font-size: 24px;
+}
+
+.second-paragraph {
+  font-weight: 700;
+  margin-top: 3rem;
 }/*# sourceMappingURL=main.css.map */
