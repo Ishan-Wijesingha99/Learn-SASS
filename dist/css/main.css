@@ -37,4 +37,17 @@ body {
 .second-paragraph {
   font-weight: 700;
   margin-top: 3rem;
+}
+
+.mixin-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.light-or-dark-p {
+  color: rgb(172, 104, 104);
+  padding: 2rem;
+  background-color: rgb(78, 157, 131);
 }/*# sourceMappingURL=main.css.map */

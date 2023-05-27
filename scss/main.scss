@@ -85,3 +85,48 @@ body {
   margin-top: 3rem;
 }
 
+
+
+// Mixin
+// Mixin in just reusable css rules, so if you don't want to repeat these 3 css rules many times, just use a mixin
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// can also pass in arguments into mixins
+@mixin flexDirection($direction) {
+  flex-direction: $direction;
+}
+
+.mixin-div {
+  // how to invoke Mixins
+  @include flexCenter;
+  @include flexDirection(column)
+}
+
+
+
+// assigning booleans to mixin parameters
+
+// here we have set the default value of $light-theme to be true, so if nothing is passed into mixin, it's true by default
+@mixin theme($light-theme: true) {
+
+  // using if statements
+  // if $light-theme true, add these styles 
+  @if $light-theme {
+    color: rgb(172, 104, 104);
+    padding: 2rem;
+    background-color: rgb(78, 157, 131);
+  }
+
+}
+
+.light-or-dark-p {
+  @include theme(true)
+}
+
+
+
+//
