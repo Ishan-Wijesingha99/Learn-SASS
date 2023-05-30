@@ -21,3 +21,25 @@ $secondary-color: #ff652f;
     @return #fff;
   }
 }
+
+// creating mixins for media queries is common
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    // this is how you access whatever is passed into the mixin, so if we do @include media-md { x }, x is accessed via @content
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    // this is how you access whatever is passed into the mixin, so if we do @include media-md { x }, x is accessed via @content
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    // this is how you access whatever is passed into the mixin, so if we do @include media-md { x }, x is accessed via @content
+    @content;
+  }
+}

@@ -285,7 +285,61 @@
   grid-gap: 2rem;
   font-size: 1.5rem;
 }
+.contact .social-icons {
+  position: initial;
+  margin-top: 2rem;
+}
 
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav-item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav-link {
+    font-size: 1.5rem;
+  }
+  .about-bio {
+    font-size: 1.5rem;
+  }
+  .projects-bio-image {
+    height: 40vh;
+  }
+  .projects-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .projects-bio-image {
+    height: 50vh;
+  }
+}
 body {
   background-color: #272727;
   color: #fff;
